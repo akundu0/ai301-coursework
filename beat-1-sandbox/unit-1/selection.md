@@ -3,8 +3,7 @@
 Path: `beat-1-sandbox/unit-1/selection.md`
 
 Record of the issue carried into Unit 2, and of the evaluation runs that produced
-`eval-run.txt`. This file is graded at the path above; a copy kept anywhere else in
-the repository is not read.
+`eval-run.txt`. This file is graded at the path above; a copy kept anywhere else in the repository is not read.
 
 Complete every labelled field below. Each is graded on its own; content placed under the
 wrong label is not graded.
@@ -44,6 +43,90 @@ Quote source text directly in each field below. Paraphrase does not satisfy them
 [The agreement score of each run you did, in order. A single run is a complete answer if
 only one run occurred. **The last score in your list must match the agreement line in the
 `eval-run.txt` you committed** — that file is the record of your final run.]
+
+Run 1:
+item    |  gold |   verdict | agree  |note|
+|---|---|---|---|---|
+issue-01 | accept  |reject  | NO    | failed: scope_small, newcomer_signal (preferred)
+issue-02 | reject | reject  | yes    |
+issue-03  |reject | reject  | yes    |
+issue-04  |accept | reject  | NO  |   failed: scope_small, clear_acceptance
+issue-05  |reject | reject |  yes |   
+issue-06  |accept  |reject   |NO     |failed: repo_in_use
+issue-07  |reject  |reject   |yes    
+issue-08  |reject | reject |  yes    
+issue-09 | accept | reject |  NO    | failed: maintainer_active
+issue-10  |reject  |reject  | yes    
+issue-11 | accept | reject  | NO  |   failed: scope_small, newcomer_signal (preferred)
+issue-12 | reject|  accept  | NO  |   graded accept
+issue-13  |reject| reject  | yes    
+issue-14|  accept | accept|   yes    
+issue-15  |reject |accept  | NO     |graded accept
+issue-16 | accept | accept |  yes    
+issue-17 | reject | reject | yes    
+issue-18  |reject | reject |  yes    
+issue-19 | accept  reject|   NO |    failed: scope_small, clear_acceptance, newcomer_signal (preferred)
+issue-20 | reject  |reject|   yes    
+
+categories: claimed 4/4  clear-accept 2/8  dead-repo 3/3  policy 0/1  scope 3/4
+agreement: 12/20 scored items  (bar: 18/20: below the bar; category floor unmet: no match in policy)
+
+
+Run 2 (partial run on disagreements):
+- Changed maintainer active window from 30 to 90 days.
+- repo_active window is 90 days instead of 60.
+- repo_in_use removed forks and dependents.
+- reads PRs mentioned in comments.
+- added AI policy check (must allow AI usage)
+grading 8 bundle(s) with rubric.md, model sonnet, 5 worker(s)...
+  issue-06: accept
+  issue-11: accept
+  issue-04: accept
+  issue-09: accept
+  issue-01: reject
+  issue-12: reject
+  issue-15: reject
+  issue-19: reject
+
+item      gold    verdict  agree  note
+issue-01  accept  reject   NO     failed: scope_bounded, newcomer_signal (preferred)
+issue-04  accept  accept   yes    
+issue-06  accept  accept   yes    
+issue-09  accept  accept   yes    
+issue-11  accept  accept   yes    
+issue-12  reject  reject   yes    
+issue-15  reject  reject   yes    
+issue-19  accept  reject   NO     failed: scope_bounded, newcomer_signal (preferred), clear_acceptance (preferred)
+
+agreement: 6/8 scored items
+
+Run 3 (full run, check):
+
+item      gold    verdict  agree  note
+issue-01  accept  reject   NO     failed: scope_bounded, newcomer_signal (preferred)
+issue-02  reject  reject   yes    
+issue-03  reject  reject   yes    
+issue-04  accept  accept   yes    
+issue-05  reject  reject   yes    
+issue-06  accept  accept   yes    
+issue-07  reject  reject   yes    
+issue-08  reject  reject   yes    
+issue-09  accept  accept   yes    
+issue-10  reject  reject   yes    
+issue-11  accept  accept   yes    
+issue-12  reject  reject   yes    
+issue-13  reject  reject   yes    
+issue-14  accept  accept   yes    
+issue-15  reject  reject   yes    
+issue-16  accept  accept   yes    
+issue-17  reject  reject   yes    
+issue-18  reject  reject   yes    
+issue-19  accept  reject   NO     failed: scope_bounded, newcomer_signal (preferred), clear_acceptance (preferred)
+issue-20  reject  accept   NO     graded accept
+
+categories: claimed 4/4  clear-accept 6/8  dead-repo 3/3  policy 1/1  scope 3/4
+agreement: 17/20 scored items  (bar: 18/20: below the bar)
+
 
 **Issue analysis**
 
