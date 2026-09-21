@@ -1,0 +1,66 @@
+{
+  "rubric": "/Users/kundu/.claude/skills/issue-select/rubric.md",
+  "model": "sonnet",
+  "agreement": [
+    0,
+    1
+  ],
+  "results": [
+    {
+      "id": "issue-01",
+      "verdict": "reject",
+      "failed_checks": [
+        "scope_bounded",
+        "newcomer_signal"
+      ],
+      "checks": [
+        {
+          "name": "maintainer_active",
+          "grade": "pass",
+          "evidence": "5 default-branch commits all dated 2026-08-04, 1 day before the 2026-08-05 capture date"
+        },
+        {
+          "name": "repo_active",
+          "grade": "pass",
+          "evidence": "archived: no; last push to any branch 2026-08-04"
+        },
+        {
+          "name": "repo_in_use",
+          "grade": "pass",
+          "evidence": "latest release 26.7.0 (2026-07-31), within 12 months; 7481 stars"
+        },
+        {
+          "name": "issue_open",
+          "grade": "pass",
+          "evidence": "state open; linked PRs: none"
+        },
+        {
+          "name": "not_assigned",
+          "grade": "pass",
+          "evidence": "assignees: none"
+        },
+        {
+          "name": "scope_bounded",
+          "grade": "fail",
+          "evidence": "Proposed changes lists 5 separate deliverables (new task page, update manage-pkgs.rst, update pip-interoperability.rst, update new-features.md, consider troubleshooting.rst entry) \u2014 a checklist meant to be split into separate PRs"
+        },
+        {
+          "name": "ai_policy_allows",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section: AI tools welcome, contributor must review/understand content"
+        },
+        {
+          "name": "newcomer_signal",
+          "grade": "fail",
+          "evidence": "labels: type::documentation only, no good first issue/help wanted"
+        },
+        {
+          "name": "clear_acceptance",
+          "grade": "pass",
+          "evidence": "body specifies exact content/sections each updated page should cover"
+        }
+      ],
+      "error": null
+    }
+  ]
+}
